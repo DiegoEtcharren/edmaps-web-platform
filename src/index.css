@@ -13,7 +13,7 @@
   background: rgba(247, 250, 252, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-b: 1px solid rgba(115, 119, 127, 0.1);
+  border-bottom: 1px solid rgba(115, 119, 127, 0.1);
 }
 
 .glass-card {

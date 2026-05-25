@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import PillarsGrid from './components/PillarsGrid';
+import ContactWidget from './components/ContactWidget';
 import { Shield, Cpu } from 'lucide-react';
 
 export default function App() {
@@ -15,6 +16,9 @@ export default function App() {
         <HeroSection />
         <PillarsGrid />
       </main>
+
+      {/* Floating Action Button and Contact Modal Dialog */}
+      <ContactWidget />
 
       {/* High-Fidelity Industrial Footer */}
       <footer className="bg-[#181c1e] border-t border-slate-steel/10 py-12 px-6 md:px-12 text-slate-400">
