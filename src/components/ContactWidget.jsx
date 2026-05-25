@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { MessageSquare, Mail, Send, X, MessageCircle, HelpCircle } from 'lucide-react';
+import { MessageSquare, Mail, X, MessageCircle, HelpCircle } from 'lucide-react';
 
-export default function ContactWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function ContactWidget({ isOpen, setIsOpen }) {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
-  const whatsappNumber = '521234567890'; // Pre-configured WhatsApp contact number
+  const whatsappNumber = '521234567890';
   const supportEmail = 'support@edmaps.com';
 
   const handleWhatsApp = (e) => {

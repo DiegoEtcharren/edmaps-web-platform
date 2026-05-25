@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import PillarsGrid from './components/PillarsGrid';
@@ -6,10 +6,12 @@ import ContactWidget from './components/ContactWidget';
 import { Shield, Cpu } from 'lucide-react';
 
 export default function App() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background text-on-background flex flex-col font-sans select-none antialiased">
-      {/* Responsive Sticky Header */}
-      <Navbar />
+      {/* Responsive Sticky Header with Contact trigger */}
+      <Navbar onContactClick={() => setIsContactOpen(true)} />
 
       {/* Main Sections */}
       <main className="flex-grow">
@@ -17,8 +19,8 @@ export default function App() {
         <PillarsGrid />
       </main>
 
-      {/* Floating Action Button and Contact Modal Dialog */}
-      <ContactWidget />
+      {/* Controlled Floating Contact Widget */}
+      <ContactWidget isOpen={isContactOpen} setIsOpen={setIsContactOpen} />
 
       {/* High-Fidelity Industrial Footer */}
       <footer className="bg-[#181c1e] border-t border-slate-steel/10 py-12 px-6 md:px-12 text-slate-400">
