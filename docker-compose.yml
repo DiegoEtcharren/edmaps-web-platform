@@ -9,8 +9,7 @@ services:
       - "5174:5173"
     volumes:
       - .:/app
-      - C:\Users\diego\AppData\Roaming\gcloud:/root/.config/gcloud
-      - C:\Users\diego\.config\gcloud:/root/.config/gcloud
+      - /home/diego/.config/gcloud:/root/.config/gcloud
     environment:
       - NODE_ENV=development
       - STITCH_API_KEY=${STITCH_API_KEY:-}
