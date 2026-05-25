@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  edmaps-portal:
+    image: node:20-alpine
+    container_name: edmaps_portal_dev
+    working_dir: /app
+    ports:
+      - "5174:5173"
+    volumes:
+      - .:/app
+      - C:\Users\diego\AppData\Roaming\gcloud:/root/.config/gcloud
+      - C:\Users\diego\.config\gcloud:/root/.config/gcloud
+    environment:
+      - NODE_ENV=development
+      - STITCH_API_KEY=${STITCH_API_KEY:-}
+    tty: true
+    stdin_open: true
+    command: sh -c "npm install && npm run dev -- --host"
