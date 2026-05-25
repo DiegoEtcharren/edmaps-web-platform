@@ -4,37 +4,36 @@
 
 @layer base {
   body {
-    @apply font-sans bg-[#0F3A5F] text-slate-100;
+    @apply font-sans bg-background text-on-background;
   }
 }
 
-/* Custom modern animations and utility classes */
+/* Custom premium light glassmorphism and technical accents */
 .glassmorphism {
-  background: rgba(15, 58, 95, 0.7);
+  background: rgba(247, 250, 252, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-b: 1px solid rgba(115, 119, 127, 0.1);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(55, 71, 79, 0.1);
+  box-shadow: 0 5px 15px rgba(15, 58, 95, 0.05);
 }
 
 @keyframes pulse-ring {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(244, 180, 0, 0.5);
+    box-shadow: 0 0 0 0 rgba(255, 160, 0, 0.5);
   }
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(244, 180, 0, 0);
+    box-shadow: 0 0 0 10px rgba(255, 160, 0, 0);
   }
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(244, 180, 0, 0);
+    box-shadow: 0 0 0 0 rgba(255, 160, 0, 0);
   }
 }
 
@@ -78,4 +77,19 @@
 
 .pulse-green {
   animation: pulse-ring-green 2s infinite;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.3s ease-out forwards;
 }
