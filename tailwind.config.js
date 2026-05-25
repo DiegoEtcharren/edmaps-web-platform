@@ -14,8 +14,16 @@ export default {
         "status-error": "#D32F2F",
         "primary": "#002441",
         "background": "#f7fafc",
+        "on-background": "#181c1e",
         "secondary": "#506169",
-        "surface-container-lowest": "#ffffff"
+        "on-secondary": "#ffffff",
+        "primary-container": "#0f3a5f",
+        "on-primary-container": "#80a4cf",
+        "secondary-container": "#d1e2ec",
+        "surface-container-low": "#f1f4f6",
+        "surface-container-lowest": "#ffffff",
+        "surface": "#f7fafc",
+        "on-surface": "#181c1e"
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
