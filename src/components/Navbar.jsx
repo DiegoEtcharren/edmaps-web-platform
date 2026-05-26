@@ -20,7 +20,7 @@ export default function Navbar({ currentPage, onNavigate }) {
   return (
     <nav className="fixed top-0 left-0 w-full h-[60px] glassmorphism z-50 flex items-center px-6 md:px-12 justify-between">
       {/* High-Fidelity Logo */}
-      <div 
+      <div
         onClick={(e) => handleLink(e, 'home', '#hero')}
         className="flex items-center space-x-3 cursor-pointer"
       >
@@ -39,44 +39,41 @@ export default function Navbar({ currentPage, onNavigate }) {
 
       {/* Desktop Links */}
       <div className="hidden md:flex items-center space-x-8 text-xs font-bold tracking-label-caps">
-        <a 
-          href="#hero" 
+        <a
+          href="#hero"
           onClick={(e) => handleLink(e, 'home', '#hero')}
           className={`transition-colors duration-300 ${currentPage === 'home' ? 'text-industrial-navy font-extrabold' : 'text-secondary hover:text-industrial-navy'}`}
         >
           INICIO
         </a>
-        <a 
-          href="#telemetry" 
+        <a
+          href="#telemetry"
           onClick={(e) => handleLink(e, 'home', '#telemetry')}
           className="text-secondary hover:text-industrial-navy transition-colors duration-300"
         >
           TELEMETRÍA
         </a>
-        <a 
-          href="#operative" 
+        <a
+          href="#operative"
           onClick={(e) => handleLink(e, 'home', '#operative')}
           className="text-secondary hover:text-industrial-navy transition-colors duration-300"
         >
           PISO DE OPERACIÓN
         </a>
-        <a 
-          href="#genealogy" 
+        <a
+          href="#genealogy"
           onClick={(e) => handleLink(e, 'home', '#genealogy')}
           className="text-secondary hover:text-industrial-navy transition-colors duration-300"
         >
           TRAZABILIDAD
         </a>
-        <a 
-          href="#contacto" 
+        <a
+          href="#contacto"
           onClick={(e) => handleLink(e, 'contact', null)}
           className={`transition-colors duration-300 ${currentPage === 'contact' ? 'text-industrial-navy font-extrabold' : 'text-secondary hover:text-industrial-navy'}`}
         >
           CONTACTO
         </a>
-        <button className="bg-industrial-navy/5 hover:bg-industrial-navy text-industrial-navy hover:text-white px-4 py-1.5 rounded border border-industrial-navy/20 hover:border-industrial-navy transition-all duration-300 font-bold text-xs tracking-label-caps">
-          SISTEMA ACTIVO
-        </button>
       </div>
 
       {/* Mobile Menu Icon */}
